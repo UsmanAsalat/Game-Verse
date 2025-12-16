@@ -2,8 +2,6 @@
 
 Game Verse is a web-based gaming platform where users can explore games, manage wishlists and carts, and place orders. The project uses a Connected SQL approach with SQL Server Management Studio (SSMS) for database operations.
 
----
-
 ## Features
 
 * User authentication with roles (Admin / User)
@@ -13,8 +11,6 @@ Game Verse is a web-based gaming platform where users can explore games, manage 
 * Place game Orders
 * Admin can manage games
 
----
-
 ## Technologies Used
 
 * Frontend / Backend: ASP.NET (as implemented in the project)
@@ -22,8 +18,6 @@ Game Verse is a web-based gaming platform where users can explore games, manage 
 * Database Tool: SQL Server Management Studio (SSMS)
 * Database Architecture: Connected Architecture
 * Version Control: Git and GitHub
-
----
 
 ## Database Design (SSMS – Connected Approach)
 
@@ -35,8 +29,6 @@ This project follows a Connected SQL approach where the application maintains a 
 CREATE DATABASE GameVerse;
 USE GameVerse;
 ```
-
----
 
 ### Tables Structure
 
@@ -53,8 +45,6 @@ CREATE TABLE Users (
 );
 ```
 
----
-
 #### Games Table
 
 Stores information about games available on the platform.
@@ -68,8 +58,6 @@ CREATE TABLE Games (
     Price DECIMAL(10,2)
 );
 ```
-
----
 
 #### Wishlist Table
 
@@ -85,8 +73,6 @@ CREATE TABLE Wishlist (
 );
 ```
 
----
-
 #### Cart Table
 
 Stores games added by users to their cart.
@@ -100,8 +86,6 @@ CREATE TABLE Cart (
     FOREIGN KEY (GameID) REFERENCES Games(GameID)
 );
 ```
-
----
 
 #### Orders Table
 
@@ -118,8 +102,6 @@ CREATE TABLE Orders (
 );
 ```
 
----
-
 ### Default Admin Account
 
 ```sql
@@ -127,16 +109,12 @@ INSERT INTO Users (Email, Password, Role)
 VALUES ('admin@gv.com', 'admin123', 'admin');
 ```
 
----
-
 ## Database Connectivity Approach
 
 * The project uses a Connected Architecture
 * The application directly communicates with the SQL Server database
 * SQL queries are executed using SSMS and application-level database connections
 * This approach is suitable for small to medium-scale applications
-
----
 
 ## How to Run the Project
 
@@ -150,20 +128,14 @@ VALUES ('admin@gv.com', 'admin123', 'admin');
 4. Configure the database connection string if required
 5. Run the project from Visual Studio
 
----
-
 ## Project Purpose
 
 This project is developed for educational purposes to demonstrate database design, connected SQL architecture, and basic e-commerce-like functionality in a gaming platform.
-
----
 
 ## Author
 
 Usman Asalat
 Software Engineering Student
-
----
 
 ## License
 
